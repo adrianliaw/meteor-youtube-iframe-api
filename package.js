@@ -1,16 +1,13 @@
 Package.describe({
-  summary: " \* Fill me in! *\ ",
+  summary: "Youtube Iframe API",
   version: "1.0.0",
-  git: " \* Fill me in! *\ "
+  git: "http://github.com/adrianliaw/meteor-youtube-iframe-api.git"
 });
 
 Package.onUse(function(api) {
   api.versionsFrom('METEOR@0.9.1.1');
-  api.addFiles('adrianliaw:youtube-iframe-api.js');
-});
-
-Package.onTest(function(api) {
-  api.use('tinytest');
-  api.use('adrianliaw:youtube-iframe-api');
-  api.addFiles('adrianliaw:youtube-iframe-api-tests.js');
+  api.addFiles('lib/www-widgetapi.js', 'client');
+  api.addFiles('lib/iframe_api.js', 'client');
+  api.export('YT', 'client');
+  api.export('YTConfig', 'client');
 });
