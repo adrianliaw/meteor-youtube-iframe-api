@@ -50,7 +50,6 @@ In JavaScript, you can include a video like this.
         };
 
         YT.load();
-    
     }
 
 
